@@ -31,5 +31,4 @@ def Mark_attendance(name):
 
     print(mycursor.rowcount, "record inserted.")
     
-name=input("Enter your name:")
-Mark_attendance(name)
+
