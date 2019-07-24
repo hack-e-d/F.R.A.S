@@ -1,6 +1,7 @@
 import face_recognition
 import cv2
 import numpy as np
+import attendance_logger as al
 flag=0
 
 video_capture = cv2.VideoCapture(0)
@@ -53,6 +54,7 @@ while True:
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
         if(flag):
             print("Welcome To class",name)
+            al.Mark_attendance(name)
         break
     cv2.imshow('Video', frame)
     if (cv2.waitKey(1) and 0xFF == ord('q')) or flag:
