@@ -16,11 +16,13 @@ def Detect_face():
     vincent_face_encoding = face_recognition.face_encodings(vincent_image)[0]
     rachel_image = face_recognition.load_image_file("RACHEL.jpg")
     rachel_face_encoding = face_recognition.face_encodings(rachel_image)[0]
+    thania_image = face_recognition.load_image_file("THANIA.jpg")
+    thania_face_encoding = face_recognition.face_encodings(thania_image)[0]
     known_face_encodings = [
-        vijay_face_encoding , vincent_face_encoding , rachel_face_encoding
+        vijay_face_encoding , vincent_face_encoding , rachel_face_encoding , thania_face_encoding
         ]
     known_face_names = [
-        "PV" , "vincent" , "Rachel"
+        "PV" , "vincent" , "Rachel" , "taniha"
     ]
 
     face_locations = []
