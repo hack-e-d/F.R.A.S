@@ -31,4 +31,3 @@ def Mark_attendance(name):
 
     print(mycursor.rowcount, "record inserted.")
     
-
