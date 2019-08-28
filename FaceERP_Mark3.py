@@ -20,7 +20,7 @@ def Detect_face():
         vijay_face_encoding , vincent_face_encoding , rachel_face_encoding
         ]
     known_face_names = [
-        "PV" , "vincent" , "Rachiel"
+        "PV" , "vincent" , "Rachel"
     ]
 
     face_locations = []
