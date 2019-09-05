@@ -1,6 +1,7 @@
 import mysql.connector
 import datetime
 import time
+from tkinter import *
 
 def View_attendance():
     mydb = mysql.connector.connect(
@@ -25,8 +26,20 @@ def View_attendance():
     records = mycursor.fetchall()
     print("Total number of rows in Laptop is: ", mycursor.rowcount)
     print("\nPrinting each laptop record")
+    lst=[]
     for row in records:
-        print("Name = ", row[0], )
-        print("Date = ", row[1])
-        print("Time  = ", row[2],"\n")
-    
+        lst.append([row[0],row[1],row[2]])
+    print(records)
+    root = Tk()
+    t = Text(root)
+    i=int(0)
+    for x in lst:
+        t.insert(END, "\nLog : "+str(i) , str(i) , "\n\tName = "+ x[0], "\n\tTime = "+ x[1], "\n\tTime = "+ x[1] ,"\n")
+        i=i+1
+    t.pack()
+    root.mainloop()
+
+
+
+
+
