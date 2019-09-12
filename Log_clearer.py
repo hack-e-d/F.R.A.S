@@ -18,4 +18,5 @@ def Clear_attendance():
     
     sql = "truncate table attendance_log"
     mycursor.execute(sql)
+    print("The enteries of the previous day are cleared")
 Clear_attendance()
